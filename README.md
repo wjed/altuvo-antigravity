@@ -1,16 +1,41 @@
-# React + Vite
+# Altuvo Career Coaching Funnel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-conversion VSL (Video Sales Letter) funnel designed to help students land elite internships and job offers. This project replicates a proven funnel structure with a focus on speed, clarity, and conversion.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **VSL Home Page**: A distraction-free landing page featuring a headline, VSL embed, and a clear Call to Action (CTA).
+-   **Scheduling Integration**: Seamless integration with Calendly for booking strategy calls.
+-   **Legal Compliance**: Dedicated pages for Privacy Policy, Terms & Conditions, Offer Disclaimer, and Data Protection.
+-   **Responsive Design**: Fully optimized for mobile, tablet, and desktop devices using Tailwind CSS.
+-   **Smart Navigation**: Automatic scroll restoration ensures users always start at the top of a page when navigating.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Framework**: React (via Vite)
+-   **Styling**: Tailwind CSS
+-   **Routing**: React Router DOM
+-   **Icons**: Lucide React
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+2.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+3.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
+
+## Project Structure
+
+-   `src/pages`: Contains the main page components (HomePage, SchedulePage, Legal Pages).
+-   `src/components`: Reusable components like TopBar, Footer, and ScrollToTop.
+-   `src/App.jsx`: Main application entry point with routing configuration.
