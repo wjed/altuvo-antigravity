@@ -3,6 +3,10 @@ import TopBar from '../components/TopBar';
 import Footer from '../components/Footer';
 
 const OfferDisclaimer = () => {
+    React.useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="min-h-screen bg-white font-sans">
             <TopBar />
