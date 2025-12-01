@@ -11,10 +11,10 @@ const HomePage = () => {
             <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Headlines */}
                 <div className="text-center mb-8">
-                    <h2 className="text-sm md:text-base font-bold text-gray-500 tracking-[0.2em] mb-4 uppercase">
+                    <h2 className="text-sm md:text-base font-medium text-gray-500 tracking-[0.2em] mb-4 uppercase">
                         WATCH THE VIDEO AND DISCOVER THE
                     </h2>
-                    <h1 className="text-3xl md:text-5xl font-extrabold text-brand-black leading-tight">
+                    <h1 className="text-3xl md:text-5xl font-medium text-brand-black leading-tight">
                         The 3-Part System That Got Me Offers From AWS, Palantir, and Verizon in Under 90 Days
                     </h1>
                 </div>
