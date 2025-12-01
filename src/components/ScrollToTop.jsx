@@ -3,17 +3,30 @@ import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
     const { pathname } = useLocation();
+    import { useLayoutEffect } from 'react';
+    import { useLocation } from 'react-router-dom';
 
-    useLayoutEffect(() => {
-        // Disable browser's default scroll restoration
-        if ('scrollRestoration' in window.history) {
-            window.history.scrollRestoration = 'manual';
-        }
+    const ScrollToTop = () => {
+        const { pathname } = useLocation();
 
-        window.scrollTo(0, 0);
-    }, [pathname]);
+        useLayoutEffect(() => {
+            // Disable browser's default scroll restoration
+            if ('scrollRestoration' in window.history) {
+                window.history.scrollRestoration = 'manual';
+            }
 
-    return null;
-};
+            // Immediate scroll
+            window.scrollTo(0, 0);
 
-export default ScrollToTop;
+            // Delayed scroll to override browser restoration
+            const timer = setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 0);
+
+            return () => clearTimeout(timer);
+        }, [pathname]);
+
+        return null;
+    };
+
+    export default ScrollToTop;
