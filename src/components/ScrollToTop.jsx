@@ -10,13 +10,19 @@ const ScrollToTop = () => {
             window.history.scrollRestoration = 'manual';
         }
 
+        const scrollToTop = () => {
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        };
+
         // Immediate scroll
-        window.scrollTo(0, 0);
+        scrollToTop();
 
         // Delayed scroll to override browser restoration
         const timer = setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 0);
+            scrollToTop();
+        }, 10);
 
         return () => clearTimeout(timer);
     }, [pathname]);
