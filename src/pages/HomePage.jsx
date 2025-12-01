@@ -34,7 +34,7 @@ const HomePage = () => {
 
                 {/* CTA Section */}
                 <div className="text-center">
-                    <p className="text-lg font-bold text-gray-800 mb-4">
+                    <p className="text-lg text-gray-800 mb-4">
                         Click Below To Schedule A Free Strategy Call
                     </p>
                     <Link
