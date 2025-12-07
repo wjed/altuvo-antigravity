@@ -28,7 +28,7 @@ const HomePage = () => {
                     <iframe
                         className="w-full h-full"
                         style={{ minHeight: '450px' }}
-                        src="https://www.youtube.com/embed/veLxPN5g1Ug"
+                        src="https://www.youtube.com/embed/bUCefSpIGus?si=IGjaBxEclLdo2wGD"
                         title="Altuvo Introduction"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
