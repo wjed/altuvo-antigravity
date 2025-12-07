@@ -24,15 +24,13 @@ const HomePage = () => {
                 </div>
 
                 {/* Video Embed */}
-                <div className="relative rounded-lg overflow-hidden bg-black shadow-2xl aspect-w-16 aspect-h-9 mb-12 border-4 border-gray-100">
+                <div className="relative rounded-lg overflow-hidden bg-black shadow-2xl mb-12 border-4 border-gray-100" style={{ padding: '56.25% 0 0 0' }}>
                     <iframe
-                        className="w-full h-full"
-                        style={{ minHeight: '450px' }}
-                        src="https://www.youtube.com/embed/bUCefSpIGus?si=IGjaBxEclLdo2wGD"
-                        title="Altuvo Introduction"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
+                        src="https://player.vimeo.com/video/1144270988?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1"
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        title="Altuvo: The Step-by-Step System to Land Elite Internships"
                     ></iframe>
                 </div>
 
