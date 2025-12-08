@@ -7,11 +7,13 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import OfferDisclaimer from './pages/OfferDisclaimer';
 import DataProtection from './pages/DataProtection';
 import ScrollToTop from './components/ScrollToTop';
+import EmailCaptureModal from './components/EmailCaptureModal';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <EmailCaptureModal />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/schedule" element={<SchedulePage />} />
