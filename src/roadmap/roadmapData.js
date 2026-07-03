@@ -1,45 +1,44 @@
 // ============================================================================
 // ROADMAP VSL: ALL SLIDE COPY LIVES HERE
-// Edit the text below to change what's on screen. Anything wrapped in
-// [BRACKETS] is a placeholder. Swap it for the real thing before you record.
-// Layout/animation code lives in ./SlideDeck.jsx and ./slides/*.jsx. You
-// shouldn't need to touch those files just to change words.
+// Edit the text below to change what's on screen. Layout/animation code
+// lives in ./SlideDeck.jsx and ./slides/*.jsx. You shouldn't need to touch
+// those files just to change words.
 // ============================================================================
 
-// The 4 phases: single source of truth, used on both the roadmap overview
-// slide (6) and the individual phase slides (7-10).
+// The Altuvo Method: 4 phases, single source of truth, used on both the
+// roadmap overview slide (6) and the individual phase slides (7-10).
 export const phases = [
   {
     number: '01',
-    name: '[PHASE 1: POSITIONING]',
+    name: 'THE AUDIT',
     outcome:
-      "Your resume, your story, and your online presence stop blending in. They start doing the selling before you ever say a word.",
+      "You find out exactly where you're actually losing: the blind spots in your resume, your story, and your strategy that you can't see because you're too close to it.",
     insight:
-      "Most people fix their resume last. It should be first, because everything downstream depends on how you're positioned before anyone reads a single line: the calls, the interviews, the offer.",
+      "Most people try to fix things before they know what's actually broken. You can't fix a gap you can't see, so this comes first, always.",
   },
   {
     number: '02',
-    name: '[PHASE 2: PIPELINE]',
+    name: 'THE REBUILD',
     outcome:
-      "You stop applying into the void and start having real conversations with real decision-makers, on repeat, not by accident.",
+      "Your resume, your story, and your online presence get rebuilt around what actually gets you picked, not what you assumed mattered.",
+    insight:
+      "Most people polish what they already have. We rebuild the parts that were never built right in the first place.",
+  },
+  {
+    number: '03',
+    name: 'THE PIPELINE',
+    outcome:
+      "You stop applying into the void and start getting in front of real decision-makers, on repeat, not by accident.",
     insight:
       "Most people think the job board is where the game gets played. It's not. By the time a role is posted, it's often already spoken for.",
   },
   {
-    number: '03',
-    name: '[PHASE 3: THE ROOM]',
-    outcome:
-      "You walk into interviews sounding like someone already doing the job, not someone auditioning for it.",
-    insight:
-      "Most people prepare answers. The ones who win prepare a story. Anyone who's ever hired someone can tell the difference in the first two minutes.",
-  },
-  {
     number: '04',
-    name: '[PHASE 4: THE CLOSE]',
+    name: 'THE CLOSE',
     outcome:
-      "You negotiate from leverage instead of gratitude, and stop leaving real money on the table over the next few years without even realizing it.",
+      "You walk into interviews like you're already doing the job, and negotiate the offer like the leverage was always yours.",
     insight:
-      "Most people take the first number because they're scared of losing the offer. Almost nobody loses an offer for asking correctly.",
+      "Most people prepare answers and take the first number. The ones who win prepare a story, and almost nobody loses an offer for asking correctly.",
   },
 ];
 
@@ -67,13 +66,13 @@ export const slideContent = {
     eyebrow: "HERE'S WHERE IT CHANGED",
     headline: 'Nobody told me this, and it changed everything.',
     subtext:
-      "The people getting the offers, the fast promotions, the callbacks: they're not smarter than you. They're not working harder. They just understood something about how this actually works that nobody ever sat down and explained. Once I saw it, I couldn't unsee it. So I built a system around it.",
+      "The people getting the offers, the fast promotions, the callbacks: they're not smarter than you. They're not working harder. They just understood something about how this actually works that nobody ever sat down and explained. Once I saw it, I couldn't unsee it. So I built a system around it: the Altuvo Method.",
   },
   whyNow: {
     eyebrow: 'WHY THIS MATTERS AT 20-25, SPECIFICALLY',
     headline: "The gap between 22 and 32 isn't ten years. It's compounding.",
     subtext:
-      "[SPECIFIC NUMBER] figured out at 22 is worth more than [SPECIFIC NUMBER] figured out at 32, not because of the money, but because of what compounds after it: the title, the network, the trajectory. Waiting doesn't feel expensive. That's exactly what makes it expensive.",
+      "$10K figured out at 22 is worth more than $50K figured out at 32, not because of the money, but because of what compounds after it: the title, the network, the trajectory. Waiting doesn't feel expensive. That's exactly what makes it expensive.",
   },
 };
 
@@ -82,7 +81,7 @@ export const credibility = {
   headline:
     "I'm not telling you this to impress you. I'm telling you because it's proof this isn't theory.",
   points: [
-    '20 years old. Finished a 4-year degree in 3, with honors, top of my major, [SPECIFIC GPA].',
+    '20 years old. Finished a 4-year degree in 3, with honors, top of my major, 3.97 GPA.',
     "Now doing a Master's in Computer Science (AI) at Georgia Tech, while working full-time in national security tech.",
     '6+ roles and internships in under 3 years: cybersecurity, cloud engineering, AI security, federal contracting, technical program management.',
     '40+ certifications across AWS, Microsoft, Google, Cisco, CompTIA, and Palantir.',
@@ -93,38 +92,47 @@ export const credibility = {
 
 export const roadmapOverview = {
   eyebrow: "SO HERE'S THE SHAPE OF IT",
-  headline: 'Four phases. One system. A completely different trajectory.',
+  headline: 'The Altuvo Method: four phases, one system, a completely different trajectory.',
   subtext:
     "This isn't a resume workshop or a LinkedIn tips thread. It's the whole path, in order.",
 };
 
+// Proof pillars, not fabricated testimonials. This program is brand new, so
+// there's no real client history to quote yet. Faking quotes and results
+// from people who don't exist would be exactly the kind of dishonest
+// marketing this brand is built to be the opposite of. Once you have real
+// student results, swap this slide for actual testimonials.
 export const proof = {
-  eyebrow: "THIS ISN'T THEORY",
-  headline: "It's repeatable. Here's what it's looked like for other people.",
-  testimonials: [
-    { quote: '[TESTIMONIAL QUOTE 1]', name: '[NAME]', result: '[RESULT, e.g. landed offer at X in Y weeks]' },
-    { quote: '[TESTIMONIAL QUOTE 2]', name: '[NAME]', result: '[RESULT]' },
-    { quote: '[TESTIMONIAL QUOTE 3]', name: '[NAME]', result: '[RESULT]' },
-  ],
-  stats: [
-    { value: '[RESULT STAT]', label: '[STAT LABEL, e.g. avg. increase in offer $]' },
-    { value: '[RESULT STAT]', label: '[STAT LABEL]' },
-    { value: '[RESULT STAT]', label: '[STAT LABEL]' },
+  eyebrow: "THIS ISN'T BORROWED THEORY",
+  headline: "Here's why this actually works, not just why it sounds good.",
+  pillars: [
+    {
+      title: 'Built From The Inside',
+      body: "Not recycled career advice. Built from actually sitting in hiring loops in national security tech, and watching firsthand what separates the offer from the rejection.",
+    },
+    {
+      title: 'Tested On Myself First',
+      body: "This is the same process that got me multiple job offers before I turned 20, and let me negotiate well above the posted range on more than one of them.",
+    },
+    {
+      title: 'Built To Be Repeated',
+      body: "Not a resume trick or a one-time hack. A process: audit, rebuild, pipeline, close. Anyone willing to do the work can run it.",
+    },
   ],
 };
 
 export const offer = {
   eyebrow: "HERE'S WHAT THIS ACTUALLY IS",
-  name: '[PROGRAM NAME]',
+  name: 'The Altuvo Method',
   headline:
-    "A [PROGRAM LENGTH] system that walks you through exactly how to position, pipeline, prepare, and negotiate your way to offers that actually match what you're capable of.",
+    "An end-to-end coaching program that walks you through exactly how to audit, rebuild, pipeline, and close your way to offers that actually match what you're capable of.",
   included: [
-    "[WHAT'S INCLUDED: ITEM 1]",
-    "[WHAT'S INCLUDED: ITEM 2]",
-    "[WHAT'S INCLUDED: ITEM 3]",
-    "[WHAT'S INCLUDED: ITEM 4]",
+    "A full audit of where you're actually losing right now, not guesses",
+    'Your resume, story, and online presence rebuilt around what gets you picked',
+    "A repeatable pipeline system, so you're never relying on the job board alone",
+    'Interview and negotiation coaching, so you close what you started',
   ],
-  transformation: '[ONE-LINE TRANSFORMATION PROMISE]',
+  transformation: 'Go from applying and hoping to positioned and picked.',
 };
 
 export const cta = {
