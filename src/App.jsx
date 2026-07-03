@@ -6,6 +6,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import OfferDisclaimer from './pages/OfferDisclaimer';
 import DataProtection from './pages/DataProtection';
+import RoadmapPage from './pages/RoadmapPage';
 import ScrollToTop from './components/ScrollToTop';
 import EmailCaptureModal from './components/EmailCaptureModal';
 
@@ -21,6 +22,8 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/offer-disclaimer" element={<OfferDisclaimer />} />
         <Route path="/data-protection" element={<DataProtection />} />
+        {/* Not in Header/Footer nav on purpose — direct-link only. */}
+        <Route path="/roadmap" element={<RoadmapPage />} />
       </Routes>
     </Router>
   );

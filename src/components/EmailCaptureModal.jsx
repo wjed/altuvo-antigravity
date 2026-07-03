@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const EmailCaptureModal = () => {
+    const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [formData, setFormData] = useState({ name: '', email: '' });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState('');
 
+    // Keep this off the roadmap VSL deck. It's screen-recorded and a popup
+    // mid-recording would ruin the take.
+    const isRoadmap = location.pathname.startsWith('/roadmap');
+
     useEffect(() => {
+        if (isRoadmap) return;
         // Check if user has already submitted
         const hasSubmitted = localStorage.getItem('emailCaptured');
         if (!hasSubmitted) {
             // Small delay before showing modal for better UX
             setTimeout(() => setIsOpen(true), 500);
         }
-    }, []);
+    }, [isRoadmap]);
 
     const handleChange = (e) => {
         setFormData({
@@ -71,7 +78,7 @@ const EmailCaptureModal = () => {
         }
     };
 
-    if (!isOpen) return null;
+    if (isRoadmap || !isOpen) return null;
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 backdrop-blur-sm">
