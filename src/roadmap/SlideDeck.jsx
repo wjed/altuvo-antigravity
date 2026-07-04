@@ -5,7 +5,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 // Tap or click the left ~30% of the screen to go back, the rest to advance.
 // Same pattern as Instagram/TikTok stories. Real links/buttons inside a
 // slide (e.g. the CTA button) are excluded from that background handler so
-// they still work normally.
+// they still work normally. Light theme, matches the rest of the site
+// (white background, brand-blue accent) instead of a standalone palette.
 const SlideDeck = ({ slides, initialIndex = 0 }) => {
     const total = slides.length;
     const clampedInitial = Math.min(Math.max(initialIndex, 0), total - 1);
@@ -58,22 +59,17 @@ const SlideDeck = ({ slides, initialIndex = 0 }) => {
 
     return (
         <div
-            className="relative h-[100dvh] w-full overflow-hidden bg-roadmap-bg select-none"
+            className="relative h-[100dvh] w-full overflow-hidden bg-white select-none"
             onClick={onBackgroundClick}
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
         >
-            {/* ambient background glow: warm gold for premium warmth, a deep indigo for depth */}
-            <div className="pointer-events-none absolute -top-40 -right-40 h-[32rem] w-[32rem] rounded-full bg-roadmap-gold/10 blur-[130px]" />
-            <div className="pointer-events-none absolute -bottom-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-indigo-900/25 blur-[130px]" />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(0,0,0,0.5)_100%)]" />
-
             {/* progress bar */}
             <div className="absolute top-0 left-0 right-0 z-30 flex gap-1 px-4 pt-4 sm:px-8 sm:pt-6">
                 {slides.map((_, i) => (
-                    <div key={i} className="h-[3px] flex-1 overflow-hidden rounded-full bg-white/10">
+                    <div key={i} className="h-[3px] flex-1 overflow-hidden rounded-full bg-gray-200">
                         <div
-                            className="h-full rounded-full bg-roadmap-gold transition-all duration-300"
+                            className="h-full rounded-full bg-brand-blue transition-all duration-300"
                             style={{ width: i <= index ? '100%' : '0%' }}
                         />
                     </div>
@@ -83,13 +79,13 @@ const SlideDeck = ({ slides, initialIndex = 0 }) => {
             {/* exit link, subtle by design so it doesn't show up loud on a recording */}
             <a
                 href="/"
-                className="absolute left-4 top-8 z-30 text-[10px] uppercase tracking-[0.2em] text-white/25 transition hover:text-roadmap-gold sm:left-8 sm:top-10"
+                className="absolute left-4 top-8 z-30 text-[10px] uppercase tracking-[0.2em] text-gray-400 transition hover:text-brand-blue sm:left-8 sm:top-10"
             >
                 Exit
             </a>
 
             {/* slide counter */}
-            <div className="absolute bottom-6 right-6 z-30 text-xs tracking-widest text-white/25 sm:bottom-8 sm:right-8">
+            <div className="absolute bottom-6 right-6 z-30 text-xs tracking-widest text-gray-400 sm:bottom-8 sm:right-8">
                 {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
             </div>
 
@@ -107,7 +103,7 @@ const SlideDeck = ({ slides, initialIndex = 0 }) => {
                     onClick={goPrev}
                     disabled={index === 0}
                     aria-label="Previous slide"
-                    className="rounded-full border border-white/10 bg-white/[0.04] p-2 text-white/60 backdrop-blur transition hover:border-roadmap-gold/40 hover:text-roadmap-gold disabled:opacity-20"
+                    className="rounded-full border border-gray-200 bg-white p-2 text-gray-500 shadow-sm transition hover:border-brand-blue/40 hover:text-brand-blue disabled:opacity-30"
                 >
                     <ChevronLeft size={20} />
                 </button>
@@ -115,7 +111,7 @@ const SlideDeck = ({ slides, initialIndex = 0 }) => {
                     onClick={goNext}
                     disabled={index === total - 1}
                     aria-label="Next slide"
-                    className="rounded-full border border-white/10 bg-white/[0.04] p-2 text-white/60 backdrop-blur transition hover:border-roadmap-gold/40 hover:text-roadmap-gold disabled:opacity-20"
+                    className="rounded-full border border-gray-200 bg-white p-2 text-gray-500 shadow-sm transition hover:border-brand-blue/40 hover:text-brand-blue disabled:opacity-30"
                 >
                     <ChevronRight size={20} />
                 </button>
