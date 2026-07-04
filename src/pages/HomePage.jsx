@@ -19,7 +19,7 @@ const HomePage = () => {
                         WATCH THE VIDEO AND DISCOVER THE
                     </h2>
                     <h1 className="text-3xl md:text-5xl font-medium text-brand-black leading-tight">
-                        The 3-Part System That Got Me Offers From AWS, Palantir, and Verizon in Under 90 Days
+                        The 3-Part System That Got Me Offers From AWS, FBI, Palantir, Verizon, Scale AI, and More in Under 90 Days
                     </h1>
                 </div>
 
