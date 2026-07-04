@@ -140,6 +140,4 @@ export const cta = {
   headline: 'Click below and book your free strategy call.',
   subtext:
     "We'll get on a call, look at where you actually are, and figure out if this is a fit. No pitch, no pressure.",
-  buttonLabel: 'Book Your Free Strategy Call',
-  buttonHref: '/schedule',
 };

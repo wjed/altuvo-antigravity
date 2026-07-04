@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
-const CTASlide = ({ eyebrow, headline, subtext, buttonLabel, buttonHref }) => (
+// No button here on purpose: this slide is the closing beat of the embedded
+// VSL itself, and the real "book a call" button lives on the page below the
+// video. The arrow just points viewers down to it.
+const CTASlide = ({ eyebrow, headline, subtext }) => (
     <div className="mx-auto max-w-2xl px-4 text-center">
         {eyebrow && (
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-brand-blue md:text-sm">
@@ -14,13 +16,7 @@ const CTASlide = ({ eyebrow, headline, subtext, buttonLabel, buttonHref }) => (
         </h1>
         {subtext && <p className="mt-4 text-base text-gray-500 md:text-lg">{subtext}</p>}
 
-        <Link
-            to={buttonHref}
-            className="mt-10 inline-flex items-center gap-2 rounded-lg bg-brand-blue px-10 py-5 text-lg font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-blue/20 transition hover:bg-brand-darkBlue"
-        >
-            {buttonLabel}
-            <ArrowRight size={20} />
-        </Link>
+        <ArrowDown className="mx-auto mt-10 h-10 w-10 animate-bounce text-brand-blue" />
     </div>
 );
 
